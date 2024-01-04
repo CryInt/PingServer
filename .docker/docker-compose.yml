@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  ping-server:
+    container_name: ping-server
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: always
+    volumes:
+      - ../.bin:/app
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+    env_file:
+      - ../.env
+    command: ["sh", "-c", "/app/ping-server"]
