@@ -1,8 +1,8 @@
-version: '3.3'
-
 services:
   ping-server:
     container_name: ping-server
+    image: pingServer
+    pull_policy: build
     build:
       context: .
       dockerfile: ./Dockerfile
