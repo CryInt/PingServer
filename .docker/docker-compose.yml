@@ -1,10 +1,6 @@
-name: pint-server
-
 services:
   ping-server:
     container_name: ping-server
-    image: ping-server
-    pull_policy: never
     build:
       context: .
       dockerfile: ./Dockerfile

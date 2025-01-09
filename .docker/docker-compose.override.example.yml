@@ -1,0 +1,3 @@
+services:
+  ping-server:
+    command: ["sh", "-c", "/app/ping-server-arm"]
